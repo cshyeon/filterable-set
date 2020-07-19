@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es6"
+    ],
+    "module": "commonjs",
+    "noLib": false,
+    "outDir": "./dist",
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es6",
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ]
+ }

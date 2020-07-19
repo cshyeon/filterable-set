@@ -1,0 +1,30 @@
+{
+  "name": "filterable-set",
+  "version": "0.0.1",
+  "description": "filterable-set is a Set that adds a filter function to entering and leaving to Set.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "npm run example",
+    "docs": "typedoc --options ./typedoc.config.ts",
+    "example": "node ./examples/index",
+    "prepublish": "npm run build && npm test",
+    "test": "jest --config ./jest.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "@typescript-eslint/parser": "^3.2.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.1.1",
+    "typedoc": "^0.17.8",
+    "typescript": "^3.9.6"
+  }
+}
