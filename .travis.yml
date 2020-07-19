@@ -3,7 +3,7 @@ node_js :
  - stable
 install:
  - npm install
- - npm install -g codecov
+ - npm install -g codecov@3.7.0
 script:
  - npm test
  - codecov
