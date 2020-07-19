@@ -1,6 +1,6 @@
 {
   "name": "filterable-set",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "filterable-set is a Set that adds a filter function to entering and leaving to Set.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
