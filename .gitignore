@@ -7,8 +7,5 @@ coverage/
 # Build files
 dist/
 
-# Documentation
-docs/
-
 # Dependencies
 node_modules/

@@ -7,7 +7,7 @@ export class FilterableSet extends Set {
   /**
    * Create FilterableSet instance like Set
    * @constructor
-   * @param initialValues {[iterable]} - Added all iterable element to FilterableSet
+   * @param initialValues - Added all iterable element to FilterableSet
    */
   constructor(initialValues?: any) {
     super(initialValues);
@@ -20,7 +20,7 @@ export class FilterableSet extends Set {
   /**
    * Add addFilters you want to, The registered filter is used as a verification function
    * when call the filterableSet.add() or relative method to determine whether to add data.
-   * @param fns {(value) => boolean | ((value) => boolean)[]} - addFilters you want to add
+   * @param fns - addFilters you want to add
    */
   addAddFilter(...fns: ((value: any) => boolean)[]): void {
     fns.forEach((fn) => {
@@ -40,7 +40,7 @@ export class FilterableSet extends Set {
   /**
    * Add deleteFilters you want to, The registered filter is used as a verification function
    * when call the filterableSet.delete() or relative method to determine whether to delete data.
-   * @param fns {(value) => boolean | <(value) => boolean>[]} - deleteFilters you want to add
+   * @param fns - deleteFilters you want to add
    */
   addDeleteFilter(...fns: ((value: any) => boolean)[]): void {
     fns.forEach((fn) => {
