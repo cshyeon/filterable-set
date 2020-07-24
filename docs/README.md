@@ -1,6 +1,6 @@
-[filterable-set - v0.1.3](README.md) › [Globals](globals.md)
+[filterable-set - v0.1.4](README.md) › [Globals](globals.md)
 
-# filterable-set - v0.1.3
+# filterable-set - v0.1.4
 
 # filterable-set 
 [![Build Status](https://travis-ci.org/cshyeon/filterable-set.svg?branch=master)](https://travis-ci.org/cshyeon/filterable-set)
@@ -38,10 +38,10 @@ fSet.delete('string value');
 // Delete added add, delete filters all.
 fSet.resetFilters();
 ```
+### Documentation
+
+Reference [API documentation](https://github.com/cshyeon/filterable-set/blob/master/docs/classes/filterableset.md) or `docs` directory manually in this project.
 
 ### TODOS:
 - [ ] examples
 - [ ] documentation
-- [ ] redesign docs
-- [ ] travis
-- [ ] codecov

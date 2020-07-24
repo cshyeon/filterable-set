@@ -35,10 +35,10 @@ fSet.delete('string value');
 // Delete added add, delete filters all.
 fSet.resetFilters();
 ```
+### Documentation
+
+Reference [API documentation](https://github.com/cshyeon/filterable-set/blob/master/docs/classes/filterableset.md) or `docs` directory manually in this project.
 
 ### TODOS:
 - [ ] examples
 - [ ] documentation
-- [ ] redesign docs
-- [ ] travis
-- [ ] codecov
