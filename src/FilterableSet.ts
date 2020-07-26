@@ -79,50 +79,84 @@ export class FilterableSet extends Set {
     this.resetDeleteFilters();
   }
 
-
+  /**
+   * Addition always succeeds regardless of the add filters.
+   * @param value value you want to add.
+   * @returns {this}
+   */
   addForce(value: any): this {
     super.add(value);
     return this;
   }
 
+  /**
+   * Deletion always succeeds regardless of the delete filters.
+   * @param value value you want to delete.
+   */
   deleteForce(value: any): boolean {
     return super.delete(value);
   }
 
+  /**
+   * Return value is add-lock lock status, true is locked
+   */
   isAddLocked(): boolean {
     return this._isAddLocked;
   }
 
+  /**
+   * Return value is delete-lock lock status, true is locked
+   */
   isDeleteLocked(): boolean {
     return this._isDeleteLocked;
   }
 
+  /**
+   * Return true if add-lock and delete-lock are locked all
+   */
   isAllLocked(): boolean {
     return this._isAddLocked && this._isDeleteLocked;
   }
 
-
+  /**
+   * It is never added regardless of the add filters.
+   */
   lockAdd(): void {
     this._isAddLocked = true;
   }
 
+  /**
+   * Unlock the add-lock, now addFilters are applied.
+   */
   unlockAdd(): void{
     this._isAddLocked = false;
   }
 
+  /**
+   * It is never deleted regardless of the delete filters.
+   */
   lockDelete(): void {
     this._isDeleteLocked = true;
   }
 
+  /**
+   * Unlock the delete-lock, now deleteFilters are applied.
+   */
   unlockDelete(): void{
     this._isDeleteLocked = false;
   }
 
+  /**
+   * It is same with lockAdd() and lockDelete()
+   */
   lockAll(): void{
     this._isAddLocked = true;
     this._isDeleteLocked = true;
   }
 
+  /**
+   * It is same with unlockAdd() and unlockDelete()
+   */
   unlockAll(): void{
     this._isAddLocked = false;
     this._isDeleteLocked = false;

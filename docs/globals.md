@@ -1,6 +1,6 @@
-[filterable-set - v0.1.4](README.md) › [Globals](globals.md)
+[filterable-set - v0.1.5](README.md) › [Globals](globals.md)
 
-# filterable-set - v0.1.4
+# filterable-set - v0.1.5
 
 ## Index
 

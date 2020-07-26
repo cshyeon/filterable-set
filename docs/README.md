@@ -1,6 +1,6 @@
-[filterable-set - v0.1.4](README.md) › [Globals](globals.md)
+[filterable-set - v0.1.5](README.md) › [Globals](globals.md)
 
-# filterable-set - v0.1.4
+# filterable-set - v0.1.5
 
 # filterable-set 
 [![Build Status](https://travis-ci.org/cshyeon/filterable-set.svg?branch=master)](https://travis-ci.org/cshyeon/filterable-set)

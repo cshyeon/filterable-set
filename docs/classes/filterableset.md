@@ -1,4 +1,4 @@
-[filterable-set - v0.1.4](../README.md) › [Globals](../globals.md) › [FilterableSet](filterableset.md)
+[filterable-set - v0.1.5](../README.md) › [Globals](../globals.md) › [FilterableSet](filterableset.md)
 
 # Class: FilterableSet ‹**T, T, T**›
 
@@ -64,7 +64,7 @@
 
 \+ **new FilterableSet**(`initialValues?`: any): *[FilterableSet](filterableset.md)*
 
-*Defined in [src/FilterableSet.ts:5](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L5)*
+*Defined in [src/FilterableSet.ts:5](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L5)*
 
 Create FilterableSet instance like Set
 
@@ -126,7 +126,7 @@ ___
 
 *Overrides void*
 
-*Defined in [src/FilterableSet.ts:132](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L132)*
+*Defined in [src/FilterableSet.ts:166](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L166)*
 
 **Parameters:**
 
@@ -142,7 +142,7 @@ ___
 
 ▸ **addAddFilter**(...`fns`: function[]): *void*
 
-*Defined in [src/FilterableSet.ts:25](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L25)*
+*Defined in [src/FilterableSet.ts:25](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L25)*
 
 Add addFilters you want to, The registered filter is used as a verification function
 when call the filterableSet.add() or relative method to determine whether to add data.
@@ -161,7 +161,7 @@ ___
 
 ▸ **addDeleteFilter**(...`fns`: function[]): *void*
 
-*Defined in [src/FilterableSet.ts:45](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L45)*
+*Defined in [src/FilterableSet.ts:45](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L45)*
 
 Add deleteFilters you want to, The registered filter is used as a verification function
 when call the filterableSet.delete() or relative method to determine whether to delete data.
@@ -180,13 +180,15 @@ ___
 
 ▸ **addForce**(`value`: any): *this*
 
-*Defined in [src/FilterableSet.ts:83](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L83)*
+*Defined in [src/FilterableSet.ts:87](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L87)*
+
+Addition always succeeds regardless of the add filters.
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`value` | any |
+Name | Type | Description |
+------ | ------ | ------ |
+`value` | any | value you want to add. |
 
 **Returns:** *this*
 
@@ -210,7 +212,7 @@ ___
 
 *Overrides void*
 
-*Defined in [src/FilterableSet.ts:147](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L147)*
+*Defined in [src/FilterableSet.ts:181](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L181)*
 
 **Parameters:**
 
@@ -226,7 +228,7 @@ ___
 
 ▸ **deleteAddFilter**(`fn`: Function): *boolean*
 
-*Defined in [src/FilterableSet.ts:36](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L36)*
+*Defined in [src/FilterableSet.ts:36](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L36)*
 
 Delete addFilters you want to
 
@@ -246,7 +248,7 @@ ___
 
 ▸ **deleteDeleteFilter**(`fn`: Function): *boolean*
 
-*Defined in [src/FilterableSet.ts:56](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L56)*
+*Defined in [src/FilterableSet.ts:56](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L56)*
 
 Delete deleteFilters you want to
 
@@ -266,13 +268,15 @@ ___
 
 ▸ **deleteForce**(`value`: any): *boolean*
 
-*Defined in [src/FilterableSet.ts:88](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L88)*
+*Defined in [src/FilterableSet.ts:96](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L96)*
+
+Deletion always succeeds regardless of the delete filters.
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`value` | any |
+Name | Type | Description |
+------ | ------ | ------ |
+`value` | any | value you want to delete.  |
 
 **Returns:** *boolean*
 
@@ -342,7 +346,9 @@ ___
 
 ▸ **isAddLocked**(): *boolean*
 
-*Defined in [src/FilterableSet.ts:92](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L92)*
+*Defined in [src/FilterableSet.ts:103](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L103)*
+
+Return value is add-lock lock status, true is locked
 
 **Returns:** *boolean*
 
@@ -352,7 +358,9 @@ ___
 
 ▸ **isAllLocked**(): *boolean*
 
-*Defined in [src/FilterableSet.ts:100](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L100)*
+*Defined in [src/FilterableSet.ts:117](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L117)*
+
+Return true if add-lock and delete-lock are locked all
 
 **Returns:** *boolean*
 
@@ -362,7 +370,9 @@ ___
 
 ▸ **isDeleteLocked**(): *boolean*
 
-*Defined in [src/FilterableSet.ts:96](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L96)*
+*Defined in [src/FilterableSet.ts:110](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L110)*
+
+Return value is delete-lock lock status, true is locked
 
 **Returns:** *boolean*
 
@@ -386,7 +396,9 @@ ___
 
 ▸ **lockAdd**(): *void*
 
-*Defined in [src/FilterableSet.ts:105](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L105)*
+*Defined in [src/FilterableSet.ts:124](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L124)*
+
+It is never added regardless of the add filters.
 
 **Returns:** *void*
 
@@ -396,7 +408,9 @@ ___
 
 ▸ **lockAll**(): *void*
 
-*Defined in [src/FilterableSet.ts:121](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L121)*
+*Defined in [src/FilterableSet.ts:152](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L152)*
+
+It is same with lockAdd() and lockDelete()
 
 **Returns:** *void*
 
@@ -406,7 +420,9 @@ ___
 
 ▸ **lockDelete**(): *void*
 
-*Defined in [src/FilterableSet.ts:113](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L113)*
+*Defined in [src/FilterableSet.ts:138](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L138)*
+
+It is never deleted regardless of the delete filters.
 
 **Returns:** *void*
 
@@ -416,7 +432,7 @@ ___
 
 ▸ **resetAddFilters**(): *void*
 
-*Defined in [src/FilterableSet.ts:63](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L63)*
+*Defined in [src/FilterableSet.ts:63](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L63)*
 
 Reset added addFilters
 
@@ -428,7 +444,7 @@ ___
 
 ▸ **resetDeleteFilters**(): *void*
 
-*Defined in [src/FilterableSet.ts:70](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L70)*
+*Defined in [src/FilterableSet.ts:70](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L70)*
 
 Reset added deleteFilters
 
@@ -440,7 +456,7 @@ ___
 
 ▸ **resetFilters**(): *void*
 
-*Defined in [src/FilterableSet.ts:77](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L77)*
+*Defined in [src/FilterableSet.ts:77](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L77)*
 
 Reset added both addFilters and deleteFilters
 
@@ -452,7 +468,9 @@ ___
 
 ▸ **unlockAdd**(): *void*
 
-*Defined in [src/FilterableSet.ts:109](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L109)*
+*Defined in [src/FilterableSet.ts:131](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L131)*
+
+Unlock the add-lock, now addFilters are applied.
 
 **Returns:** *void*
 
@@ -462,7 +480,9 @@ ___
 
 ▸ **unlockAll**(): *void*
 
-*Defined in [src/FilterableSet.ts:126](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L126)*
+*Defined in [src/FilterableSet.ts:160](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L160)*
+
+It is same with unlockAdd() and unlockDelete()
 
 **Returns:** *void*
 
@@ -472,7 +492,9 @@ ___
 
 ▸ **unlockDelete**(): *void*
 
-*Defined in [src/FilterableSet.ts:117](https://github.com/cshyeon/filterable-set/blob/65fd5bf/src/FilterableSet.ts#L117)*
+*Defined in [src/FilterableSet.ts:145](https://github.com/cshyeon/filterable-set/blob/2396825/src/FilterableSet.ts#L145)*
+
+Unlock the delete-lock, now deleteFilters are applied.
 
 **Returns:** *void*
 
